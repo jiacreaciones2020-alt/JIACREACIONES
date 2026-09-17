@@ -1,208 +1,1110 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jia Creaciones | Papelería y Diseño</title>
-    <meta name="description" content="Descubre los mejores productos de papelería, artículos creativos y escolares en Jia Creaciones.">
+    <title>Papelería JIA Creaciones - Papelería Creativa y Agendamiento de Pedidos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#4B8BF5',
+                        brandBlueDark: '#2B62D9',
+                        brandGreen: '#B2C938',
+                        brandGreenDark: '#8DA321',
+                        brandYellow: '#FFCE38',
+                        brandPink: '#FF9EBD',
+                        brandSoftBg: '#F3F7FE',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        :root {
-            --azul-claro: #4DA3FF;
-            --azul-oscuro: #2B70C9;
-            --amarillo-creaciones: #D4E157; /* Tono inspirado en el amarillo suave del logo */
-            --amarillo-lapiz: #FFEB3B;
-            --rosa-borrador: #FF80AB;
-            --fondo-suave: #F4F9FF;
-            --texto-oscuro: #333333;
-        }
-
         body {
-         <header>
-    <nav class="navbar">
-        <!-- Logo a la izquierda -->
-        <div class="descarga.jfif">
-            <a href="#">
-                <img src="descarga.jfif" alt="Mi Logo" class="descarga.jfif">
-            </a>
-        </div>
-
-        <!-- Opciones de menú a la derecha (opcional) -->
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fafcfe;
+            color: #334155;
         }
-
-        header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            padding: 20px;
-            text-align: center;
+        h1, h2, h3, .font-heading {
+            font-family: 'Fredoka', cursive, sans-serif;
         }
-
-        .logo-container img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(77, 163, 255, 0.3);
+        .star-bounce {
+            animation: bounceSoft 3s ease-in-out infinite;
         }
-
-        h1 {
-            color: var(--azul-oscuro);
-            margin: 10px 0 5px 0;
-            letter-spacing: 1px;
+        @keyframes bounceSoft {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
         }
-
-        .subtitulo {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+        .custom-shadow {
+            box-shadow: 0 10px 25px -5px rgba(75, 139, 245, 0.15), 0 8px 10px -6px rgba(178, 201, 56, 0.1);
         }
-
-        nav {
-            background-color: var(--azul-oscuro);
-            padding: 10px;
-            text-align: center;
+        .custom-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--amarillo-lapiz);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--azul-claro), var(--azul-oscuro));
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            background-color: var(--amarillo-lapiz);
-            color: #333;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .btn:hover {
-            background-color: #FFEE58;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .seccion-titulo {
-            text-align: center;
-            color: var(--azul-oscuro);
-            margin-bottom: 30px;
-        }
-
-        .grid-productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            border-top: 5px solid var(--azul-claro);
-        }
-
-        .card h3 {
-            color: var(--azul-oscuro);
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+        .custom-card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 30px -8px rgba(75, 139, 245, 0.25);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 min-h-screen flex flex-col antialiased selection:bg-brandYellow selection:text-slate-800">
 
-    <header>
-        <!-- Reemplaza 'logo.png' con el nombre del archivo de imagen de tu logo en tu repositorio -->
-        <div class="logo-container">
-            <img src="img-20241128-WA0019" alt="Logo JIA Creaciones">
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3 min-h-[96px]">
+                
+                <!-- Logo Brand -->
+                <a href="#inicio" class="flex items-center gap-4 group">
+                    <!-- SVG Recreation of JIA Creaciones Logo -->
+                    <div class="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+                        <svg viewBox="0 0 500 500" class="w-full h-full drop-shadow-sm">
+                            <!-- Orbit Arch -->
+                            <path d="M 90,200 A 180,180 0 0,1 410,220" fill="none" stroke="#4B8BF5" stroke-width="14" stroke-linecap="round"/>
+                            <path d="M 140,160 A 150,150 0 0,1 360,180" fill="none" stroke="#B2C938" stroke-width="6" stroke-linecap="round"/>
+                            <!-- Stars -->
+                            <!-- Top Big Star -->
+                            <path d="M 270,120 L 278,140 L 300,140 L 282,152 L 288,172 L 270,158 L 252,172 L 258,152 L 240,140 L 262,140 Z" fill="#4B8BF5"/>
+                            <circle cx="272" cy="138" r="3" fill="white" opacity="0.6"/>
+                            <!-- Bottom Left Star -->
+                            <path d="M 180,380 L 192,410 L 225,410 L 198,428 L 208,458 L 180,438 L 152,458 L 162,428 L 135,410 L 168,410 Z" fill="#4B8BF5"/>
+                            <!-- Bottom Stars small -->
+                            <path d="M 260,420 L 266,435 L 282,435 L 269,444 L 274,459 L 260,449 L 246,459 L 251,444 L 238,435 L 254,435 Z" fill="#4B8BF5"/>
+                            <path d="M 330,410 L 334,422 L 347,422 L 336,429 L 340,441 L 330,433 L 320,441 L 324,429 L 313,422 L 326,422 Z" fill="#4B8BF5"/>
+                            <path d="M 380,380 L 383,390 L 394,390 L 385,396 L 388,406 L 380,400 L 372,406 L 375,396 L 366,390 L 377,390 Z" fill="#4B8BF5"/>
+                            <!-- Pencil -->
+                            <g transform="translate(310, 180) rotate(45)">
+                                <rect x="0" y="0" width="30" height="70" rx="4" fill="#FFCE38"/>
+                                <path d="M 0,70 L 15,100 L 30,70 Z" fill="#FFEAA7"/>
+                                <path d="M 10,90 L 15,100 L 20,90 Z" fill="#475569"/>
+                                <rect x="0" y="-18" width="30" height="18" rx="3" fill="#FF9EBD"/>
+                                <rect x="0" y="-4" width="30" height="6" fill="#94A3B8"/>
+                            </g>
+                            <!-- Text overlay -->
+                            <text x="100" y="190" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="28" fill="#B2C938">PAPELERÍA</text>
+                            <text x="85" y="270" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="82" fill="#4B8BF5">JIA</text>
+                            <text x="85" y="335" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="42" fill="#B2C938">CREACIONES</text>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-2xl sm:text-3xl text-slate-800 tracking-tight leading-none group-hover:text-brandBlue transition-colors">
+                            Papelería <span class="text-brandBlue">JIA</span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-bold text-brandGreen tracking-wider uppercase mt-1">Creaciones & Detalles</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#inicio" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Inicio</a>
+                    <a href="#trabajos" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Ver Trabajos</a>
+                    <a href="#agendar" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Agendar Pedido</a>
+                    <a href="#cotizador" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Cotizador</a>
+                    <a href="#contacto" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Ubicación y Contacto</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#agendar" class="inline-flex items-center gap-2 bg-brandBlue hover:bg-brandBlueDark text-white font-semibold px-5 py-2.5 rounded-full shadow-md shadow-blue-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                        <i class="fa-solid fa-calendar-check text-brandYellow"></i>
+                        <span>Agendar Pedido</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-600 hover:text-brandBlue hover:bg-blue-50 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-        <h1>JIACREACIONES</h1>
-        <div class="subtitulo">Papelería, Arte yDiseño Creativo</div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
+            <a href="#inicio" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Inicio</a>
+            <a href="#trabajos" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Ver Mi Trabajo</a>
+            <a href="#agendar" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Agendar Pedido</a>
+            <a href="#cotizador" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Cotizador Rápido</a>
+            <a href="#contacto" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Ubicación y Contacto</a>
+            <div class="pt-2">
+                <a href="#agendar" class="mobile-nav-link w-full text-center flex items-center justify-center gap-2 bg-brandBlue text-white font-semibold py-3 rounded-xl shadow-md">
+                    <i class="fa-solid fa-calendar-check text-brandYellow"></i>
+                    Agendar Pedido Ahora
+                </a>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <!-- Hero Section -->
+    <section id="inicio" class="relative overflow-hidden pt-8 pb-16 lg:py-20 bg-gradient-to-b from-brandSoftBg via-white to-slate-50">
+        <!-- Floating Decorative Background SVG Stars -->
+        <div class="absolute top-10 left-5 text-brandBlue/20 text-4xl star-bounce" style="animation-delay: 0s;">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="absolute top-28 right-12 text-brandGreen/25 text-5xl star-bounce" style="animation-delay: 1s;">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="absolute bottom-10 left-1/3 text-brandYellow/40 text-3xl star-bounce" style="animation-delay: 2s;">
+            <i class="fa-solid fa-pencil"></i>
+        </div>
 
-    <section class="hero" id="inicio">
-        <h2>¡Bienvenidos a Jiacreaciones!</h2>
-        <p>Todo lo que necesitas para tus proyectos escolares, manualidades y detalles únicos.</p>
-        <a href="#contacto" class="btn">Contáctanos</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100/80 text-brandBlueDark text-sm font-bold mb-6 border border-blue-200 shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles text-brandGreen font-bold"></i>
+                        <span>Papelería Creativa & Detallitos Personalizados</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Diseñamos tus ideas, <br class="hidden sm:inline">
+                        <span class="text-brandBlue relative inline-block">
+                            agenda tus pedidos
+                            <svg class="absolute -bottom-2 left-0 w-full h-3 text-brandGreen/60" viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <path d="M0 15 Q 50 0 100 15" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                            </svg>
+                        </span> 
+                        con amor ✏️✨
+                    </h1>
+
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        En <strong class="text-brandBlue">Papelería JIA Creaciones</strong> hacemos realidad tus toppers 3D, invitaciones mágicas, agendas personalizadas, recuerdos para eventos y papelería escolar con acabado profesional.
+                    </p>
+
+                    <!-- Hero Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#agendar" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brandBlue hover:bg-brandBlueDark text-white font-bold text-lg px-8 py-4 rounded-2xl shadow-lg shadow-blue-300/50 transition-all transform hover:-translate-y-1">
+                            <i class="fa-solid fa-calendar-days text-brandYellow text-xl"></i>
+                            <span>Agendar un Pedido</span>
+                        </a>
+                        <a href="#trabajos" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-800 font-bold text-lg px-8 py-4 rounded-2xl border-2 border-slate-200 shadow-sm transition-all transform hover:-translate-y-1">
+                            <i class="fa-solid fa-images text-brandGreen text-xl"></i>
+                            <span>Ver Galería de Trabajos</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats / Highlights -->
+                    <div class="mt-12 pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div class="p-2">
+                            <p class="font-display font-extrabold text-2xl sm:text-3xl text-brandBlue">+500</p>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500">Pedidos Entregados</p>
+                        </div>
+                        <div class="p-2">
+                            <p class="font-display font-extrabold text-2xl sm:text-3xl text-brandGreen">100%</p>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500">Personalizado</p>
+                        </div>
+                        <div class="p-2">
+                            <p class="font-display font-extrabold text-2xl sm:text-3xl text-brandYellow">5 ⭐</p>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500">Clientes Felices</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Right (Card Showcase with Brand Emblem) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <!-- Background Glow Effect -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-brandBlue/30 via-brandGreen/30 to-brandYellow/30 rounded-3xl blur-2xl opacity-70"></div>
+                        
+                        <!-- Main Logo Badge Showcase -->
+                        <div class="relative bg-white rounded-3xl p-8 shadow-xl border border-slate-100 text-center flex flex-col items-center">
+                            
+                            <!-- Custom Logo Graphic -->
+                            <div class="w-72 h-72 sm:w-80 sm:h-80 mb-4 relative">
+                                <svg viewBox="0 0 500 500" class="w-full h-full drop-shadow-md">
+                                    <path d="M 90,200 A 180,180 0 0,1 410,220" fill="none" stroke="#4B8BF5" stroke-width="16" stroke-linecap="round"/>
+                                    <path d="M 140,160 A 150,150 0 0,1 360,180" fill="none" stroke="#B2C938" stroke-width="7" stroke-linecap="round"/>
+                                    <!-- Stars -->
+                                    <path d="M 270,120 L 278,140 L 300,140 L 282,152 L 288,172 L 270,158 L 252,172 L 258,152 L 240,140 L 262,140 Z" fill="#4B8BF5"/>
+                                    <circle cx="272" cy="138" r="4" fill="white"/>
+                                    <path d="M 180,380 L 192,410 L 225,410 L 198,428 L 208,458 L 180,438 L 152,458 L 162,428 L 135,410 L 168,410 Z" fill="#4B8BF5"/>
+                                    <path d="M 260,420 L 266,435 L 282,435 L 269,444 L 274,459 L 260,449 L 246,459 L 251,444 L 238,435 L 254,435 Z" fill="#4B8BF5"/>
+                                    <path d="M 330,410 L 334,422 L 347,422 L 336,429 L 340,441 L 330,433 L 320,441 L 324,429 L 313,422 L 326,422 Z" fill="#4B8BF5"/>
+                                    <!-- Pencil -->
+                                    <g transform="translate(310, 180) rotate(45)">
+                                        <rect x="0" y="0" width="32" height="75" rx="5" fill="#FFCE38"/>
+                                        <path d="M 0,75 L 16,105 L 32,75 Z" fill="#FFEAA7"/>
+                                        <path d="M 10,95 L 16,105 L 22,95 Z" fill="#334155"/>
+                                        <rect x="0" y="-18" width="32" height="18" rx="4" fill="#FF9EBD"/>
+                                        <rect x="0" y="-4" width="32" height="6" fill="#94A3B8"/>
+                                    </g>
+                                    <text x="100" y="190" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="28" fill="#B2C938">PAPELERÍA</text>
+                                    <text x="85" y="270" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="82" fill="#4B8BF5">JIA</text>
+                                    <text x="85" y="335" font-family="'Fredoka', sans-serif" font-weight="bold" font-size="42" fill="#B2C938">CREACIONES</text>
+                                </svg>
+                            </div>
+
+                            <div class="bg-blue-50/80 rounded-2xl p-4 w-full border border-blue-100 flex items-center justify-around gap-2 text-slate-700 font-semibold text-sm">
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-scissors text-brandBlue"></i> Corte 3D</span>
+                                <span class="text-slate-300">•</span>
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-gift text-brandGreen"></i> Eventos</span>
+                                <span class="text-slate-300">•</span>
+                                <span class="flex items-center gap-1.5"><i class="fa-solid fa-pen-ruler text-brandYellow"></i> Diseño</span>
+                            </div>
+
+                            <!-- Floating Badge -->
+                            <div class="absolute -bottom-4 -right-2 bg-brandGreen text-white px-4 py-2 rounded-2xl shadow-lg flex items-center gap-2 text-xs font-bold transform rotate-3">
+                                <i class="fa-solid fa-heart text-white"></i> Hecho a Mano con Amor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <div class="container" id="productos">
-        <h2 class="seccion-titulo">Nuestros Productos</h2>
-        <div class="grid-productos">
-            <div class="card">
-                <h3>Papelería Escolar</h3>
-                <p>Cuadernos, lápices, colores y todo lo esencial para el regreso a clases con estilo.</p>
+    <!-- Showcase Gallery Section ("Ver Mi Trabajo") -->
+    <section id="trabajos" class="py-16 bg-white border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brandBlue font-bold text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Galería de Proyectos</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 mt-3">Mira Nuestros Trabajos Realizados</h2>
+                <p class="text-slate-600 mt-2">Cada detalle está elaborado con papel de alta calidad, cortes de precisión e impresión nítida para tus momentos especiales.</p>
             </div>
-            <div class="card">
-                <h3>Manualidades</h3>
-                <p>Materiales didácticos, estrellas decorativas, papeles especiales y cintas.</p>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+                <button onclick="filterGallery('todos')" class="gallery-filter-btn active-filter px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-brandBlue text-white shadow-md">
+                    Todos los Trabajos
+                </button>
+                <button onclick="filterGallery('fiesta')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    🎉 Fiesta & Toppers 3D
+                </button>
+                <button onclick="filterGallery('pinatas')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    🪅 Piñatas
+                </button>
+                <button onclick="filterGallery('agendas')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    📖 Agendas & Libretas
+                </button>
+                <button onclick="filterGallery('escolar')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    🎒 Papelería Escolar
+                </button>
+                <button onclick="filterGallery('recuerdos')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    🎁 Cajitas & Recuerdos
+                </button>
+                <button onclick="filterGallery('otros')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    ✨ Otros Artículos
+                </button>
             </div>
-            <div class="card">
-                <h3>Detalles y Regalos</h3>
-                <p>Diseños personalizados y artículos creativos para sorprender a esa persona especial.</p>
+
+            <!-- Portfolio Items Grid -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-card fiesta custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-blue-100 to-pink-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandBlue">
+                                🎂
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Cake Topper 3D Temático</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Cake Topper 3D con Capas y Luz LED', 'fiesta', 'Topper de pastel multicapa con detalles dorados, relieve en foam y temática personalizada a elección del cliente.', '$12 - $18 USD')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-brandBlue uppercase bg-blue-50 px-2.5 py-1 rounded-md">Fiesta & Cumpleaños</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Cake Topper 3D Multicapa</h3>
+                            <p class="text-sm text-slate-600 mt-1">Con detalles en cartulina glitter, relieve 3D y elementos en acrílico o shaker.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 3-4 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Cake Topper 3D')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-card agendas custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-yellow-100 to-green-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandGreen">
+                                📓
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Agenda Docente & Personal</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Agenda Tapa Dura Personalizada', 'agendas', 'Agenda con pasta dura termolaminada, elástico de cierre, sobre interno, stickers y control financiero.', '$15 - $22 USD')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-brandGreen uppercase bg-green-50 px-2.5 py-1 rounded-md">Agendas & Libretas</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Agenda Tapa Dura Con Nombre</h3>
+                            <p class="text-sm text-slate-600 mt-1">Anillado metálico doble O, papel de 90g y diseño de portada 100% exclusivo.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 4-5 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Agenda Tapa Dura')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-card fiesta recuerdos custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandPink">
+                                🍬
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Cajitas Milk Box & Dulceros</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Set de Cajitas Golosineras Temáticas', 'recuerdos', 'Kit de 12 cajitas tipo Milk, Pirámide o Valijita con apliques 3D y lazo de cinta de satén.', '$18 - $30 el docena')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-purple-600 uppercase bg-purple-50 px-2.5 py-1 rounded-md">Fiesta & Recuerdos</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Kits de Cajitas Golosineras</h3>
+                            <p class="text-sm text-slate-600 mt-1">Perfectas para mesas de dulces en bautizos, babyshowers y cumpleaños infantiles.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 5-7 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Cajitas Golosineras')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-card escolar custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-blue-100 to-yellow-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandYellow">
+                                ✏️
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Kit Etiquetas Escolares</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Kit Completo Etiquetas Escolares Resistentes al Agua', 'escolar', 'Incluye stickers lavables para cuadernos, lápices, lonchera y etiquetas de tela para ropa.', '$10 - $16 USD')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-amber-600 uppercase bg-amber-50 px-2.5 py-1 rounded-md">Papelería Escolar</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Etiquetas Adhesivas Escolares</h3>
+                            <p class="text-sm text-slate-600 mt-1">Stickers laminados a prueba de agua con el personaje o diseño favorito de tu pequeño.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 2-3 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Kit Etiquetas Escolares')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-card fiesta recuerdos custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-indigo-100 to-pink-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandBlue">
+                                ✉️
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Invitaciones Elegantes</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Invitaciones Caladas & Acabado Foil', 'fiesta', 'Sobres calados en corte láser, detalles en foil dorado/plateado y cinta de raso.', '$2.50 - $4.00 c/u')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-brandBlue uppercase bg-blue-50 px-2.5 py-1 rounded-md">Invitaciones</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Tarjetas e Invitaciones 3D</h3>
+                            <p class="text-sm text-slate-600 mt-1">Modelos con sobre calado, acabados metalizados foil y pases de entrada coordinados.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 5-8 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Invitaciones Evento')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-card fiesta recuerdos custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandGreen">
+                                🔤
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Letras & Números 3D</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Letras 3D Decorativas para Mesa Principal', 'fiesta', 'Letras volumétricas en cartulina de 220g con shaker, figuras con relieve y luces.', '$6 - $10 por letra')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 uppercase bg-emerald-50 px-2.5 py-1 rounded-md">Decoración Mesa</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Letras 3D Temáticas</h3>
+                            <p class="text-sm text-slate-600 mt-1">Ideales para formar el nombre del festejado en la mesa principal de cumpleaños.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 4-6 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Letras 3D')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7: Piñata Personalizada (Máximo 1 Metro de Alto) -->
+                <div class="gallery-card pinatas custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-yellow-100 to-amber-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl">
+                                🪅
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Piñata Personalizada</span>
+                            <p class="text-xs text-amber-800 font-bold mt-1 bg-amber-200/70 px-2 py-0.5 rounded-full inline-block">Al tamaño que elijas (Máx. 1m)</p>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Piñata Personalizada (Hasta 1 Metro)', 'pinatas', 'Piñata artesanal 100% personalizada en el personaje, número o figura que desees. La elaboramos exactamente en las medidas y tamaño que elijas (máximo 1 metro de alto), con estructura súper resistente y acabados 3D en papel crepé y detalles metalizados.', '$25 - $45 USD (Según tamaño exacto)')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-amber-700 uppercase bg-yellow-50 px-2.5 py-1 rounded-md">Piñatas Personalizadas</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Piñata a la Medida (Máx. 1m)</h3>
+                            <p class="text-sm text-slate-600 mt-1">Elige el motivo y las dimensiones que prefieras (hasta 1 metro de alto). Resistencia garantizada y relieve 3D.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 5-7 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Piñata Personalizada (hasta 1m)')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir la mía <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8: Mini Piñatas Sorpresa (Moved exclusively to Recuerdos) -->
+                <div class="gallery-card recuerdos custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl">
+                                🎁
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Mini Piñatas Sorpresa</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Set de Mini Piñatas para Cotillón o Sorpresas', 'recuerdos', 'Mini piñatas individuales abribles con trampilla inferior, ideales para llenar de dulces o sorpresas y entregar como recuerdos.', '$18 - $28 el medio docena')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-pink-600 uppercase bg-pink-50 px-2.5 py-1 rounded-md">Recuerdos & Cotillón</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Mini Piñatas para Cotillón</h3>
+                            <p class="text-sm text-slate-600 mt-1">Perfectas para obsequiar a los invitados, decorativas y reutilizables.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 4-5 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Mini Piñatas Cotillón')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir un Set <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9: Marco Photobooth / Otros Artículos -->
+                <div class="gallery-card otros custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl">
+                                📸
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Marcos Photobooth Selfie</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Marco para Fotos Photobooth Selfie', 'otros', 'Marco gigante personalizado en cartón pluma rígido con recortes 3D, nombre del festejado, edad y accesorios temáticos.', '$20 - $32 USD')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 px-2.5 py-1 rounded-md">Otros Artículos</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Marco para Fotos Photobooth</h3>
+                            <p class="text-sm text-slate-600 mt-1">El complemento ideal para capturar los recuerdos más divertidos de tu fiesta.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 3-4 días</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Marco Photobooth / Cuadro')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Pedir uno <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Scheduler Section ("Agendar Pedidos") -->
+    <section id="agendar" class="py-16 bg-gradient-to-b from-slate-50 via-blue-50/50 to-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-brandGreen font-bold text-sm uppercase tracking-widest bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                    <i class="fa-solid fa-calendar-check mr-1"></i> Reserva Tu Fecha
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 mt-3">Agendar un Pedido Personalizado</h2>
+                <p class="text-slate-600 mt-2">Completa la información sobre tu pedido y la fecha de tu evento. Te enviaremos la confirmación inmediata con tu diseño.</p>
+            </div>
+
+            <!-- Booking Card Form -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-blue-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brandYellow/10 rounded-bl-full pointer-events-none"></div>
+
+                <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                    
+                    <!-- Form Row 1: Personal Info -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-user text-brandBlue mr-1"></i> Nombre y Apellido *
+                            </label>
+                            <input type="text" id="clientName" required placeholder="Ej. Maria Delgado" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-phone text-brandGreen mr-1"></i> Teléfono / WhatsApp *
+                            </label>
+                            <input type="tel" id="clientPhone" required placeholder="Ej. +58 424 123 4567" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium">
+                        </div>
+                    </div>
+
+                    <!-- Form Row 2: Product Type & Quantity -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-box text-brandYellow mr-1"></i> Tipo de Trabajo a Solicitar *
+                            </label>
+                            <select id="productType" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium bg-white">
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="Cake Topper 3D">Cake Topper 3D para Pastel</option>
+                                <option value="Piñata Personalizada (hasta 1m)">Piñata Personalizada (al tamaño que elijas, máx. 1m)</option>
+                                <option value="Mini Piñatas Cotillón">Mini Piñatas Sorpresa para Cotillón</option>
+                                <option value="Agenda Tapa Dura">Agenda o Libreta Personalizada</option>
+                                <option value="Cajitas Golosineras">Cajitas Golosineras (Docena)</option>
+                                <option value="Kit Etiquetas Escolares">Kit Etiquetas Escolares</option>
+                                <option value="Invitaciones Evento">Invitaciones de Evento</option>
+                                <option value="Letras 3D">Letras / Números 3D Decorativos</option>
+                                <option value="Marco Photobooth / Cuadro">Marco Photobooth o Cuadro de Firmas</option>
+                                <option value="Otro Trabajo Personalizado">Otro Proyecto Personalizado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-hashtag text-brandBlue mr-1"></i> Cantidad Aproximada
+                            </label>
+                            <input type="number" id="quantity" min="1" value="1" placeholder="Ej. 1, 12, 50" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium">
+                        </div>
+                    </div>
+
+                    <!-- Form Row 3: Event Date & Delivery Mode -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-calendar-day text-brandBlue mr-1"></i> Fecha requerida de entrega *
+                            </label>
+                            <input type="date" id="eventDate" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium bg-white">
+                            <p class="text-xs text-slate-500 mt-1">💡 Recomendamos agendar con al menos 4-5 días de anticipación.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">
+                                <i class="fa-solid fa-truck-ramp-box text-brandGreen mr-1"></i> Modo de Entrega
+                            </label>
+                            <select id="deliveryMethod" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium bg-white">
+                                <option value="Retiro en Tienda / Local">Retiro personal en taller / tienda</option>
+                                <option value="Envío a Domicilio">Envío a domicilio / Delivery</option>
+                                <option value="Envío Nacional">Envío por encomienda nacional</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Form Row 4: Theme & Custom Details -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">
+                            <i class="fa-solid fa-palette text-brandPink mr-1"></i> Temática, Colores o Detalles Especiales
+                        </label>
+                        <textarea id="customDetails" rows="3" placeholder="Ej. Cumpleaños #5 temática Granja de Zenón, colores azul y verde pastel. Nombre del festejado: Mateo." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium resize-none"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-2 text-xs text-slate-500">
+                            <i class="fa-solid fa-shield-halved text-brandGreen text-base"></i>
+                            <span>Tus datos están protegidos. Respuesta en menos de 2 horas.</span>
+                        </div>
+                        <button type="submit" class="w-full sm:w-auto bg-brandGreen hover:bg-brandGreenDark text-white font-bold text-lg px-8 py-3.5 rounded-2xl shadow-lg shadow-green-200 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Enviar Pedido por WhatsApp</span>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Estimator Calculator Section -->
+    <section id="cotizador" class="py-16 bg-white border-t border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-brandYellow font-bold text-sm uppercase tracking-widest bg-yellow-50 px-3 py-1 rounded-full border border-yellow-200 text-amber-700">
+                    <i class="fa-solid fa-calculator mr-1"></i> Calculadora de Presupuesto
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 mt-3">Calcula un Estimado Rápido</h2>
+                <p class="text-slate-600 mt-2">Selecciona los productos y extras que necesitas para calcular el costo estimado de tu pedido.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-50 via-slate-50 to-amber-50 rounded-3xl p-6 sm:p-8 border border-blue-100 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Calculator Options -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1.5">Producto Base:</label>
+                        <select id="calcBaseProduct" onchange="updateEstimate()" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white font-semibold text-slate-800">
+                            <option value="12">Cake Topper 3D Básico ($12 USD)</option>
+                            <option value="16">Cake Topper 3D Con Luces LED ($16 USD)</option>
+                            <option value="28">Piñata Personalizada (al tamaño que elijas - máx 1m) ($28 USD)</option>
+                            <option value="18">Mini Piñatas Cotillón (Set x6 - $18 USD)</option>
+                            <option value="18">Agenda Tapa Dura Personalizada ($18 USD)</option>
+                            <option value="22">Kit 12 Cajitas Milk Box Temáticas ($22 USD)</option>
+                            <option value="12">Kit Etiquetas Escolares Completas ($12 USD)</option>
+                            <option value="7">Letras 3D Grandes ($7 USD por unidad)</option>
+                            <option value="20">Marco Photobooth Selfie ($20 USD)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1.5">Cantidad de unidades:</label>
+                        <div class="flex items-center gap-3">
+                            <button onclick="changeCalcQty(-1)" class="w-10 h-10 rounded-xl bg-white border border-slate-200 font-bold text-xl text-slate-700 hover:bg-slate-100 flex items-center justify-center">-</button>
+                            <input type="number" id="calcQty" value="1" min="1" max="100" onchange="updateEstimate()" class="w-20 text-center py-2 rounded-xl border border-slate-200 font-bold text-lg text-slate-800 bg-white">
+                            <button onclick="changeCalcQty(1)" class="w-10 h-10 rounded-xl bg-white border border-slate-200 font-bold text-xl text-slate-700 hover:bg-slate-100 flex items-center justify-center">+</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Detalles Adicionales:</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-700">
+                                <input type="checkbox" id="extraShaker" onchange="updateEstimate()" class="w-4 h-4 text-brandBlue rounded focus:ring-brandBlue">
+                                <span>Efecto Shaker con Lentejuelas (+ $3.00 USD)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-700">
+                                <input type="checkbox" id="extraFoil" onchange="updateEstimate()" class="w-4 h-4 text-brandBlue rounded focus:ring-brandBlue">
+                                <span>Detalles en Foil Dorado / Metalizado (+ $2.50 USD)</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer text-sm font-medium text-slate-700">
+                                <input type="checkbox" id="extraExpress" onchange="updateEstimate()" class="w-4 h-4 text-brandBlue rounded focus:ring-brandBlue">
+                                <span>Entrega Exprés en 48 Horas (+ $5.00 USD)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Total Display -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-200 text-center flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Costo Estimado</span>
+                        <div class="my-4">
+                            <span id="estimatedPrice" class="font-display font-extrabold text-5xl text-brandBlue">$12.00</span>
+                            <span class="text-slate-500 font-medium"> USD</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Nota: Los precios exactos se confirman tras revisar los detalles del diseño final.</p>
+                    </div>
+
+                    <a href="#agendar" onclick="applyEstimateToForm()" class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brandBlue hover:bg-brandBlueDark text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Agendar con esta Estimación</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section ("Dirección y Teléfonos") -->
+    <section id="contacto" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brandBlue font-bold text-sm uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                    <i class="fa-solid fa-location-dot mr-1"></i> Encuéntranos
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 mt-3">Dirección y Teléfonos de Contacto</h2>
+                <p class="text-slate-600 mt-2">Estamos listos para atenderte personalmente en nuestro taller o responder tus consultas por vía telefónica y WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Contact Information Cards -->
+                <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+                    
+                    <!-- Card 1: Dirección Física -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 text-brandBlue rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
+                            <i class="fa-solid fa-shop"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-slate-900">Dirección del Taller</h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Av. Principal los Ilustres, Centro Comercial Papelería Creativa, Nivel 1, Local #14.
+                            </p>
+                            <span class="inline-block mt-2 text-xs font-bold text-brandGreen bg-green-50 px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-circle text-[8px] mr-1"></i> Abierto para retiros de pedidos
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Teléfonos y WhatsApp -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-100 text-brandGreenDark rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-slate-900">Teléfonos de Atención</h3>
+                            <div class="mt-2 space-y-1">
+                                <p class="text-slate-700 font-semibold text-sm">
+                                    <i class="fa-brands fa-whatsapp text-brandGreen mr-1.5"></i> +58 412 987 6543 <span class="text-xs text-slate-400 font-normal">(WhatsApp Principal)</span>
+                                </p>
+                                <p class="text-slate-700 font-semibold text-sm">
+                                    <i class="fa-solid fa-phone-flip text-brandBlue mr-1.5"></i> +58 212 555 4321 <span class="text-xs text-slate-400 font-normal">(Llamadas Taller)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Horarios de Atención -->
+                    <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="w-12 h-12 bg-yellow-100 text-amber-600 rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg text-slate-900">Horario de Atención</h3>
+                            <ul class="mt-1 text-sm text-slate-600 space-y-1">
+                                <li><strong>Lunes a Viernes:</strong> 8:30 AM - 6:00 PM</li>
+                                <li><strong>Sábados:</strong> 9:00 AM - 2:00 PM</li>
+                                <li><strong>Domingos & Feriados:</strong> Solo entregas agendadas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Quick Bar -->
+                    <div class="bg-brandBlue text-white p-6 rounded-3xl flex items-center justify-between shadow-md">
+                        <div>
+                            <p class="font-display font-bold text-lg">¡Siguenos en Redes!</p>
+                            <p class="text-xs opacity-90">Mira nuestros videos de elaboración</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white hover:text-brandBlue rounded-xl flex items-center justify-center transition-colors text-lg">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white hover:text-brandBlue rounded-xl flex items-center justify-center transition-colors text-lg">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Map Visual Container -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-4 shadow-md border border-slate-200/80 flex flex-col min-h-[380px]">
+                    <div class="flex justify-between items-center px-4 py-3 border-b border-slate-100">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot text-brandBlue"></i>
+                            <span class="font-display font-bold text-slate-800">Ubicación Papelería JIA Creaciones</span>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" class="text-xs font-bold text-brandBlue hover:underline flex items-center gap-1">
+                            Abrir en Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Simulated Styled Interactive Map Embed -->
+                    <div class="relative flex-1 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 mt-3 flex items-center justify-center group">
+                        <!-- Graphic Map Background Representation -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-50 to-green-50 opacity-90">
+                            <!-- Road lines SVG visual -->
+                            <svg class="w-full h-full opacity-30" viewBox="0 0 400 300" preserveAspectRatio="none">
+                                <path d="M 0,50 Q 200,80 400,40" stroke="#94A3B8" stroke-width="12" fill="none"/>
+                                <path d="M 120,0 Q 150,150 180,300" stroke="#94A3B8" stroke-width="16" fill="none"/>
+                                <path d="M 0,220 Q 200,200 400,250" stroke="#94A3B8" stroke-width="10" fill="none"/>
+                                <circle cx="160" cy="120" r="40" fill="#4B8BF5" opacity="0.15"/>
+                            </svg>
+                        </div>
+
+                        <!-- Map Pin Marker -->
+                        <div class="relative z-10 text-center p-6 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-blue-100 max-w-sm">
+                            <div class="w-14 h-14 bg-brandBlue text-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg text-2xl star-bounce">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h4 class="font-display font-bold text-slate-900 text-lg">Papelería JIA Creaciones</h4>
+                            <p class="text-xs text-slate-600 mt-1">Av. Principal los Ilustres, C.C. Papelería, Local 14</p>
+                            <p class="text-xs font-bold text-brandGreen mt-2"><i class="fa-solid fa-square-parking mr-1"></i> Estacionamiento disponible</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery Detail View -->
+    <div id="detailModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative transform transition-all border border-blue-100">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold">
+                ✕
+            </button>
+            <div id="modalCategoryTag" class="text-xs font-bold uppercase text-brandBlue bg-blue-50 px-3 py-1 rounded-full inline-block mb-3">
+                Categoría
+            </div>
+            <h3 id="modalTitle" class="font-display font-extrabold text-2xl text-slate-900 mb-2">Título del Trabajo</h3>
+            <p id="modalDescription" class="text-slate-600 text-sm mb-6 leading-relaxed">
+                Descripción detallada de los materiales y acabados del producto.
+            </p>
+
+            <div class="bg-blue-50/70 p-4 rounded-2xl border border-blue-100 mb-6 flex justify-between items-center">
+                <span class="text-xs font-bold text-slate-500 uppercase">Precio Referencial</span>
+                <span id="modalPrice" class="font-display font-extrabold text-xl text-brandBlue">$12.00 USD</span>
+            </div>
+
+            <div class="flex gap-3">
+                <button onclick="closeModal()" class="flex-1 py-3 px-4 rounded-xl border border-slate-200 font-bold text-slate-700 hover:bg-slate-50 text-sm">
+                    Cerrar
+                </button>
+                <a id="modalBookBtn" href="#agendar" onclick="closeModal()" class="flex-1 py-3 px-4 rounded-xl bg-brandBlue hover:bg-brandBlueDark text-white font-bold text-center text-sm shadow-md">
+                    Agendar Este Modelo
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="container" id="contacto">
-        <h2 class="seccion-titulo">Contáctanos</h2>
-        <div class="card" style="max-width: 600px; margin: 0 auto; border-top-color: var(--rosa-borrador);">
-            <h3>¿Quieres hacer un pedido?</h3>
-            <p>Escríbenos para consultar disponibilidad de productos y entregas personalizadas.</p>
-            <p><strong>WhatsApp / Teléfono:</strong> +584123539180
-                                                     +584120160590</p>
-            <p><strong>Ciudad / Ubicación:</strong> CALLE 5 DE JULIO, LOS JARDINES DEL VALLE, CARACAS</p>
-        </div>
-    </div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-12 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brandBlue rounded-xl flex items-center justify-center text-white font-display font-bold text-xl">
+                            JIA
+                        </div>
+                        <span class="font-display font-bold text-2xl text-white">Papelería JIA Creaciones</span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm">
+                        Tu tienda de papelería personalizada favorita. Transformamos papel en momentos inolvidables para cumpleaños, agendas y papelería escolar.
+                    </p>
+                    <p class="text-xs text-brandYellow font-semibold">
+                        ⭐ Creaciones hechas con amor y dedicación.
+                    </p>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 JIACREACIONES. Todos los derechos reservados.</p>
+                <!-- Navigation Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-base mb-3">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-brandBlue transition-colors">Inicio</a></li>
+                        <li><a href="#trabajos" class="hover:text-brandBlue transition-colors">Ver Trabajos</a></li>
+                        <li><a href="#agendar" class="hover:text-brandBlue transition-colors">Agendar Pedido</a></li>
+                        <li><a href="#cotizador" class="hover:text-brandBlue transition-colors">Calculadora</a></li>
+                        <li><a href="#contacto" class="hover:text-brandBlue transition-colors">Ubicación y Teléfonos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-base mb-3">Contacto Directo</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><i class="fa-brands fa-whatsapp text-brandGreen mr-1.5"></i> +58 412 353 9180</li>
+                        <li><i class="fa-solid fa-whatsapp text-brandBlue mr-1.5"></i> +58 412 016 0590</li>
+                        <li><i class="fa-solid fa-location-dot text-brandYellow mr-1.5"></i> Av. intercomunal, los jardines del valle, calle 5 de julio, Local 14</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>© <span id="currentYear"></span> Papelería JIA Creaciones. Todos los derechos reservados.</p>
+                <p class="flex items-center gap-1">
+                    Diseñado con <i class="fa-solid fa-heart text-brandPink"></i> para Papelería JIA Creaciones
+                </p>
+            </div>
+        </div>
     </footer>
 
-</body>
-</html>
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Filter Gallery Logic
+        function filterGallery(category) {
+            const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+            const items = document.querySelectorAll('.gallery-card');
+
+            // Toggle active styling on buttons
+            filterBtns.forEach(btn => {
+                btn.classList.remove('bg-brandBlue', 'text-white', 'shadow-md');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-brandBlue', 'text-white', 'shadow-md');
+
+            // Show/Hide Gallery Cards
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Functionality for Showcase
+        function openModal(title, category, description, price) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalCategoryTag').innerText = category;
+            document.getElementById('modalDescription').innerText = description;
+            document.getElementById('modalPrice').innerText = price;
+            
+            document.getElementById('detailModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        // Select Product for Booking from Gallery
+        function selectProductForBooking(productName) {
+            const select = document.getElementById('productType');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value === productName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // Price Estimator Logic
+        function changeCalcQty(amount) {
+            const qtyInput = document.getElementById('calcQty');
+            let current = parseInt(qtyInput.value) || 1;
+            current += amount;
+            if (current < 1) current = 1;
+            qtyInput.value = current;
+            updateEstimate();
+        }
+
+        function updateEstimate() {
+            const basePrice = parseFloat(document.getElementById('calcBaseProduct').value) || 0;
+            const qty = parseInt(document.getElementById('calcQty').value) || 1;
+            
+            let extras = 0;
+            if (document.getElementById('extraShaker').checked) extras += 3.00;
+            if (document.getElementById('extraFoil').checked) extras += 2.50;
+            if (document.getElementById('extraExpress').checked) extras += 5.00;
+
+            const total = (basePrice * qty) + extras;
+            document.getElementById('estimatedPrice').innerText = '$' + total.toFixed(2);
+        }
+
+        function applyEstimateToForm() {
+            const selectBase = document.getElementById('calcBaseProduct');
+            const selectedText = selectBase.options[selectBase.selectedIndex].text;
+            const qty = document.getElementById('calcQty').value;
+            const estimatedPrice = document.getElementById('estimatedPrice').innerText;
+
+            document.getElementById('quantity').value = qty;
+            document.getElementById('customDetails').value = `Cotización estimada web: ${selectedText} (${qty} unidad/es) - Total aprox: ${estimatedPrice}`;
+        }
+
+        // Form Submit Handler (Redirects to pre-filled WhatsApp message)
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const product = document.getElementById('productType').value;
+            const qty = document.getElementById('quantity').value;
+            const date = document.getElementById('eventDate').value;
+            const delivery = document.getElementById('deliveryMethod').value;
+            const details = document.getElementById('customDetails').value;
+
+            const phoneStore = "584129876543"; // Main Store WhatsApp number
+
+            const message = `¡Hola *Papelería JIA Creaciones*! ✨ Quisiera agendar un pedido:%0A%0A` +
+                            `👤 *Nombre:* ${encodeURIComponent(name)}%0A` +
+                            `📞 *Teléfono:* ${encodeURIComponent(phone)}%0A` +
+                            `🎨 *Producto:* ${encodeURIComponent(product)} (Cant: ${encodeURIComponent(qty)})%0A` +
+                            `📅 *Fecha de Entrega:* ${encodeURIComponent(date)}%0A` +
+                            `🚚 *Modo Entrega:* ${encodeURIComponent(delivery)}%0A` +
+                            `📝 *Detalles/Temática:* ${encodeURIComponent(details || 'Sin especificaciones aún')}%0A%0A` +
+                            `¡Quedo a la espera de su confirmación!`;
+
+            window.open(`https://wa.me/${phoneStore}?text=${message}`, '_blank');
+        }
+    </script>
