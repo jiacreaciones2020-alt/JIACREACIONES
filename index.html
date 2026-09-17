@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -114,6 +113,7 @@
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
                     <a href="#inicio" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Inicio</a>
+                    <a href="#fotos-carnet" class="px-3 py-2 rounded-xl text-brandBlue font-bold bg-blue-50/80 hover:bg-blue-100 transition-all flex items-center gap-1.5"><i class="fa-solid fa-camera text-brandBlue"></i> Fotos Carnet</a>
                     <a href="#trabajos" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Ver Trabajos</a>
                     <a href="#agendar" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Agendar Pedido</a>
                     <a href="#cotizador" class="px-3 py-2 rounded-xl text-slate-700 hover:text-brandBlue font-medium hover:bg-blue-50 transition-all">Cotizador</a>
@@ -138,6 +138,7 @@
         <!-- Mobile Navigation Menu -->
         <div id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
             <a href="#inicio" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Inicio</a>
+            <a href="#fotos-carnet" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-bold text-brandBlue bg-blue-50">📸 Fotos Carnet al Instante</a>
             <a href="#trabajos" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Ver Mi Trabajo</a>
             <a href="#agendar" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Agendar Pedido</a>
             <a href="#cotizador" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-blue-50 hover:text-brandBlue">Cotizador Rápido</a>
@@ -272,6 +273,103 @@
         </div>
     </section>
 
+    <!-- Dedicated Section: Fotos Tipo Carnet -->
+    <section id="fotos-carnet" class="py-16 bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-600 text-white relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 text-brandYellow text-xs font-bold backdrop-blur-md uppercase tracking-wider">
+                        <i class="fa-solid fa-bolt text-brandYellow"></i> Servicio Exprés al Instante
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight leading-tight">
+                        Fotos Tipo Carnet <br class="hidden sm:inline">
+                        <span class="text-brandYellow">Profesionales y Rápidas</span> 📸
+                    </h2>
+
+                    <p class="text-blue-100 text-base sm:text-lg max-w-xl leading-relaxed">
+                        Toma de foto presencial en nuestro taller con fondo blanco, azul o rojo oficial. Incluye retoque suave, papel fotográfico de alta calidad y opción de archivo digital en alta resolución.
+                    </p>
+
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15">
+                            <i class="fa-solid fa-clock text-brandYellow text-xl mb-1"></i>
+                            <h4 class="font-bold text-sm">Entrega en 10 min</h4>
+                            <p class="text-xs text-blue-200">Listas al instante</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brandYellow text-xl mb-1"></i>
+                            <h4 class="font-bold text-sm">Retoque Digital</h4>
+                            <p class="text-xs text-blue-200">Iluminación nítida</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-envelope text-brandYellow text-xl mb-1"></i>
+                            <h4 class="font-bold text-sm">Copia Digital</h4>
+                            <p class="text-xs text-blue-200">Envío por WhatsApp/Email</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                        <a href="#agendar" onclick="selectProductForBooking('Fotos Tipo Carnet')" class="inline-flex items-center justify-center gap-2 bg-brandYellow hover:bg-yellow-400 text-slate-900 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Agendar Cita / Consultar</span>
+                        </a>
+                        <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white font-bold px-6 py-3.5 rounded-2xl border border-white/20 transition-all">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Ver Ubicación del Taller</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package Pricing Cards -->
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                    
+                    <!-- Pack 1 -->
+                    <div class="bg-white text-slate-800 p-5 rounded-3xl shadow-xl border border-blue-100 relative group transition-all hover:scale-[1.02]">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-bold uppercase text-brandBlue bg-blue-50 px-2.5 py-1 rounded-md">Combo Escolar / Trámites</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900 mt-1">Set Básico (6 Fotos)</h3>
+                            </div>
+                            <span class="font-display font-extrabold text-2xl text-brandBlue">$4.00 <span class="text-xs font-normal text-slate-500">USD</span></span>
+                        </div>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-600">
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> 6 fotos impresas papel fotográfico brillante</li>
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> Medida estándar 3x4cm o pasaporte</li>
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> Edición ligera de brillo y contraste</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pack 2 Featured -->
+                    <div class="bg-amber-50 text-slate-800 p-5 rounded-3xl shadow-xl border-2 border-brandYellow relative group transition-all hover:scale-[1.02]">
+                        <div class="absolute -top-3 right-4 bg-brandYellow text-slate-900 text-[10px] font-extrabold uppercase tracking-wider px-3 py-0.5 rounded-full shadow-sm">
+                            ⭐ Más Pedido
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-bold uppercase text-amber-800 bg-amber-200/60 px-2.5 py-1 rounded-md">Combo Completo</span>
+                                <h3 class="font-display font-bold text-xl text-slate-900 mt-1">Set 12 Fotos + Digital</h3>
+                            </div>
+                            <span class="font-display font-extrabold text-2xl text-slate-900">$6.00 <span class="text-xs font-normal text-slate-500">USD</span></span>
+                        </div>
+                        <ul class="mt-3 space-y-1.5 text-xs text-slate-700">
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> 12 fotos impresas papel ultra-glossy</li>
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> Archivo digital recortado en JPG vía WhatsApp/Email</li>
+                            <li><i class="fa-solid fa-check text-brandGreen mr-1.5"></i> Fondo blanco/azul a elección para Visa, Pasaporte o Colegio</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Showcase Gallery Section ("Ver Mi Trabajo") -->
     <section id="trabajos" class="py-16 bg-white border-t border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,6 +384,9 @@
             <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
                 <button onclick="filterGallery('todos')" class="gallery-filter-btn active-filter px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-brandBlue text-white shadow-md">
                     Todos los Trabajos
+                </button>
+                <button onclick="filterGallery('carnet')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+                    📸 Fotos Carnet
                 </button>
                 <button onclick="filterGallery('fiesta')" class="gallery-filter-btn px-5 py-2.5 rounded-2xl font-bold text-sm transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
                     🎉 Fiesta & Toppers 3D
@@ -310,6 +411,36 @@
             <!-- Portfolio Items Grid -->
             <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
+                <!-- Gallery Item 0 (Fotos Tipo Carnet) -->
+                <div class="gallery-card carnet custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
+                    <div class="relative h-64 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center p-6 overflow-hidden group">
+                        <div class="text-center p-4">
+                            <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md text-3xl text-brandBlue">
+                                📸
+                            </div>
+                            <span class="font-display font-bold text-slate-800 text-lg">Fotos Tipo Carnet Impresas</span>
+                        </div>
+                        <div class="absolute inset-0 bg-brandBlue/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                            <button onclick="openModal('Fotos Tipo Carnet Impresas + Digital', 'carnet', 'Servicio exprés de fotos tipo carnet para licencias, colegio, pasaportes, visados o títulos universitarios. Incluye retoque suave de fondo e iluminación.', '$4.00 - $6.00 USD')" class="bg-white text-brandBlue px-4 py-2 rounded-xl font-bold text-sm shadow-md hover:bg-brandYellow hover:text-slate-900 transition-colors">
+                                <i class="fa-solid fa-eye mr-1"></i> Ver Detalle
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+                        <div>
+                            <span class="text-xs font-bold text-brandBlue uppercase bg-blue-50 px-2.5 py-1 rounded-md">Fotos Carnet</span>
+                            <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Fotos Tipo Carnet Exprés</h3>
+                            <p class="text-sm text-slate-600 mt-1">Impresión fotográfica HD en minutos con opción de envío de archivo digital.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brandGreen"></i> Tiempo: 10 minutos</span>
+                            <a href="#agendar" onclick="selectProductForBooking('Fotos Tipo Carnet')" class="text-xs font-bold text-brandBlue hover:text-brandBlueDark flex items-center gap-1">
+                                Solicitar <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Gallery Item 1 -->
                 <div class="gallery-card fiesta custom-card-hover bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 flex flex-col">
                     <div class="relative h-64 bg-gradient-to-br from-blue-100 to-pink-100 flex items-center justify-center p-6 overflow-hidden group">
@@ -627,6 +758,7 @@
                             </label>
                             <select id="productType" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brandBlue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-slate-800 font-medium bg-white">
                                 <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="Fotos Tipo Carnet">Fotos Tipo Carnet (Impresas y/o Digitales)</option>
                                 <option value="Cake Topper 3D">Cake Topper 3D para Pastel</option>
                                 <option value="Piñata Personalizada (hasta 1m)">Piñata Personalizada (al tamaño que elijas, máx. 1m)</option>
                                 <option value="Mini Piñatas Cotillón">Mini Piñatas Sorpresa para Cotillón</option>
@@ -711,6 +843,8 @@
                     <div>
                         <label class="block text-sm font-bold text-slate-700 mb-1.5">Producto Base:</label>
                         <select id="calcBaseProduct" onchange="updateEstimate()" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white font-semibold text-slate-800">
+                            <option value="4">Fotos Tipo Carnet (Set x6 impresas) ($4 USD)</option>
+                            <option value="6">Fotos Tipo Carnet (Set x12 + Digital) ($6 USD)</option>
                             <option value="12">Cake Topper 3D Básico ($12 USD)</option>
                             <option value="16">Cake Topper 3D Con Luces LED ($16 USD)</option>
                             <option value="28">Piñata Personalizada (al tamaño que elijas - máx 1m) ($28 USD)</option>
@@ -1108,3 +1242,5 @@
             window.open(`https://wa.me/${phoneStore}?text=${message}`, '_blank');
         }
     </script>
+</body>
+</html>
