@@ -1,67 +1,394 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papelería JIA Creaciones - Papelería Creativa y Agendamiento de Pedidos</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brandBlue: '#4B8BF5',
-                        brandBlueDark: '#2B62D9',
-                        brandGreen: '#B2C938',
-                        brandGreenDark: '#8DA321',
-                        brandYellow: '#FFCE38',
-                        brandPink: '#FF9EBD',
-                        brandSoftBg: '#F3F7FE',
-                    },
-                    fontFamily: {
-                        sans: ['Quicksand', 'sans-serif'],
-                        display: ['Fredoka', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+!-- SECCIÓN DE CONTACTO Y UBICACIÓN -->!-- SECCIÓN DE CONTACTO Y UBICACIÓN --><!-- SECCIÓN DE CONTACTO Y UBICACIÓN -->
+<section id="contacto" class="py-16 bg-brandSoftBg">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <!-- Título de la Sección -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-brandBlue font-heading mb-2">¡Ponte en Contacto con Nosotros!</h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">¿Tienes una idea en mente o quieres agendar un pedido? Escríbenos, llámanos o visítanos, ¡nos encantará ayudarte!</p>
+            <div class="w-24 h-1 bg-brandYellow mx-auto mt-4 rounded-full star-bounce"></div>
+        </div>
 
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #fafcfe;
-            color: #334155;
-        }
-        h1, h2, h3, .font-heading {
-            font-family: 'Fredoka', cursive, sans-serif;
-        }
-        .star-bounce {
-            animation: bounceSoft 3s ease-in-out infinite;
-        }
-        @keyframes bounceSoft {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(5deg); }
-        }
-        .custom-shadow {
-            box-shadow: 0 10px 25px -5px rgba(75, 139, 245, 0.15), 0 8px 10px -6px rgba(178, 201, 56, 0.1);
-        }
-        .custom-card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .custom-card-hover:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 30px -8px rgba(75, 139, 245, 0.25);
-        }
-    </style>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            
+            <!-- Bloque Izquierdo: Canales de Contacto y Formulario -->
+            <div class="space-y-6">
+                
+                <!-- Tarjetas de Contacto Rápido (Cuadrícula de 2x2) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-emerald-100">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500 text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">WhatsApp</h3>
+                            <p class="text-sm text-emerald-600 font-medium">0412-353-91-80</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Llamada Telefónica -->
+                    <a href="tel:+584120160590" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-blue-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-brandBlue text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Llámanos</h3>
+                            <p class="text-sm text-brandBlue font-medium">0412-016-05-90</p>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-pink-100">
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-brandPink text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Instagram</h3>
+                            <p class="text-sm text-brandPink font-medium">@jiacreaciones</p>
+                        </div>
+                    </a>
+
+                    <!-- Correo Electrónico -->
+                    <a href="mailto:jiacreaciones@gmail.com" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-yellow-100">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl flex-shrink-0">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Correo</h3>
+                            <p class="text-sm text-amber-600 font-medium">jiacreaciones@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Formulario de Pedidos -->
+                <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100">
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-6 flex items-center gap-2">
+                        <i class="fa-regular fa-paper-plane text-brandGreen"></i> Envíanos un Mensaje
+                    </h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Tu Nombre</label>
+                            <input type="text" placeholder="Ej. María Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Correo Electrónico</label>
+                            <input type="email" placeholder="maria@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Detalles de tu pedido o consulta</label>
+                            <textarea rows="4" placeholder="Cuéntanos qué productos necesitas o la idea para tu agenda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandBlue hover:bg-brandBlueDark text-white font-heading font-bold py-3 px-6 rounded-xl transition duration-300 shadow-md shadow-brandBlue/20 flex items-center justify-center gap-2">
+                            Enviar Consulta <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Ubicación y Horarios -->
+            <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100 space-y-6 h-full flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-brandPink"></i> Nuestra Ubicación
+                    </h3>
+                    <p class="text-slate-600 mb-4">
+                        <strong class="text-slate-700">Dirección:</strong> Av. Intercomunal, cruce con Calle 5 de Julio, Los Jardines del Valle, Caracas, Venezuela.
+                    </p>
+                    
+                    <!-- Contenedor del Mapa -->
+                    <div class="w-full h-72 rounded-2xl overflow-hidden border-2 border-brandSoftBg shadow-inner relative group">
+                        <!-- Mapa interactivo centrado en la zona indicada -->
+                        <iframe 
+                            src="https://google.com" 
+                            class="w-full h-full border-0 grayscale-[15%] group-hover:grayscale-0 transition duration-500" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Horario de Atención -->
+                <div class="bg-brandSoftBg p-5 rounded-2xl border border-blue-50">
+                    <h4 class="font-heading font-bold text-brandBlueDark mb-2 flex items-center gap-2">
+                        <i class="fa-regular fa-clock"></i> Horario de Atención:
+                    </h4>
+                    <ul class="text-sm space-y-1 text-slate-600">
+                        <li class="flex justify-between"><span>Lunes a Viernes:</span> <span class="font-semibold text-slate-700">9:00 AM - 6:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sábados:</span> <span class="font-semibold text-slate-700">10:00 AM - 2:00 PM</span></li>
+                        <li class="flex justify-between text-brandPink font-medium"><span>Domingos:</span> <span>Cerrado (Cargando energías)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="py-16 bg-brandSoftBg">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <!-- Título de la Sección -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-brandBlue font-heading mb-2">¡Ponte en Contacto con Nosotros!</h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">¿Tienes una idea en mente o quieres agendar un pedido? Escríbenos, llámanos o visítanos, ¡nos encantará ayudarte!</p>
+            <div class="w-24 h-1 bg-brandYellow mx-auto mt-4 rounded-full star-bounce"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            
+            <!-- Bloque Izquierdo: Canales de Contacto y Formulario -->
+            <div class="space-y-6">
+                
+                <!-- Tarjetas de Contacto Rápido (Cuadrícula de 2x2) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-emerald-100">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500 text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">WhatsApp</h3>
+                            <p class="text-sm text-emerald-600 font-medium">0412-353-91-80</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Llamada Telefónica -->
+                    <a href="tel:+584120160590" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-blue-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-brandBlue text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Llámanos</h3>
+                            <p class="text-sm text-brandBlue font-medium">0412-016-05-90</p>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-pink-100">
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-brandPink text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Instagram</h3>
+                            <p class="text-sm text-brandPink font-medium">@jiacreaciones</p>
+                        </div>
+                    </a>
+
+                    <!-- Correo Electrónico -->
+                    <a href="mailto:jiacreaciones@gmail.com" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-yellow-100">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl flex-shrink-0">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Correo</h3>
+                            <p class="text-sm text-amber-600 font-medium">jiacreaciones@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Formulario de Pedidos -->
+                <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100">
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-6 flex items-center gap-2">
+                        <i class="fa-regular fa-paper-plane text-brandGreen"></i> Envíanos un Mensaje
+                    </h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Tu Nombre</label>
+                            <input type="text" placeholder="Ej. María Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Correo Electrónico</label>
+                            <input type="email" placeholder="maria@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Detalles de tu pedido o consulta</label>
+                            <textarea rows="4" placeholder="Cuéntanos qué productos necesitas o la idea para tu agenda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandBlue hover:bg-brandBlueDark text-white font-heading font-bold py-3 px-6 rounded-xl transition duration-300 shadow-md shadow-brandBlue/20 flex items-center justify-center gap-2">
+                            Enviar Consulta <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Ubicación y Horarios -->
+            <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100 space-y-6 h-full flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-brandPink"></i> Nuestra Ubicación
+                    </h3>
+                    <p class="text-slate-600 mb-4">
+                        <strong class="text-slate-700">Dirección:</strong> Av. Intercomunal, cruce con Calle 5 de Julio, Los Jardines del Valle, Caracas, Venezuela.
+                    </p>
+                    
+                    <!-- Contenedor del Mapa -->
+                    <div class="w-full h-72 rounded-2xl overflow-hidden border-2 border-brandSoftBg shadow-inner relative group">
+                        <!-- Mapa interactivo centrado en la zona indicada -->
+                        <iframe 
+                            src="https://google.com" 
+                            class="w-full h-full border-0 grayscale-[15%] group-hover:grayscale-0 transition duration-500" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Horario de Atención -->
+                <div class="bg-brandSoftBg p-5 rounded-2xl border border-blue-50">
+                    <h4 class="font-heading font-bold text-brandBlueDark mb-2 flex items-center gap-2">
+                        <i class="fa-regular fa-clock"></i> Horario de Atención:
+                    </h4>
+                    <ul class="text-sm space-y-1 text-slate-600">
+                        <li class="flex justify-between"><span>Lunes a Viernes:</span> <span class="font-semibold text-slate-700">9:00 AM - 6:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sábados:</span> <span class="font-semibold text-slate-700">10:00 AM - 2:00 PM</span></li>
+                        <li class="flex justify-between text-brandPink font-medium"><span>Domingos:</span> <span>Cerrado (Cargando energías)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+Usa el código con precaución.¿Qué se ajustó con estos datos?Enlace Internacional de WhatsApp: Se le agregó el prefijo de país 58 requerido para abrir chats automáticamente sin importar dónde esté el cliente.Marcación telefónica directa: Configurado con la etiqueta HTML tel: para que, al tocarlo desde un móvil, abra la app de llamadas al instante.Dirección escrita y visual: El texto y las coordenadas del iframe ahora apuntan directamente a la zona de Los Jardines del Valle en El Valle.¿Hay alguna otra sección o funcionalidad que te gustaría estructurar o corregir para tu página web?WikipediaLos Jardines de El Valle - Wikipedia, la enciclopedia libreLa estación, está ubicada la Avenida Intercomunal del Valle a la altura del sector Los Jardines, en la Parroquia El Valle,es.aroundus.comParroquia civil en municipio Libertador, Caracas, Venezuela12 sept 2026 — El Valle es una parroquia civil en el municipio Libertador de Caracas ubicada en la zona suroeste de la ciudad. El área combina zo...
+<section id="contacto" class="py-16 bg-brandSoftBg">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <!-- Título de la Sección -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-brandBlue font-heading mb-2">¡Ponte en Contacto con Nosotros!</h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">¿Tienes una idea en mente o quieres agendar un pedido? Escríbenos, llámanos o visítanos, ¡nos encantará ayudarte!</p>
+            <div class="w-24 h-1 bg-brandYellow mx-auto mt-4 rounded-full star-bounce"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            
+            <!-- Bloque Izquierdo: Canales de Contacto y Formulario -->
+            <div class="space-y-6">
+                
+                <!-- Tarjetas de Contacto Rápido (Cuadrícula de 2x2) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-emerald-100">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-500 text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">WhatsApp</h3>
+                            <p class="text-sm text-emerald-600 font-medium">0412-353-91-80</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Llamada Telefónica -->
+                    <a href="tel:+584120160590" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-blue-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-brandBlue text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Llámanos</h3>
+                            <p class="text-sm text-brandBlue font-medium">0412-016-05-90</p>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-pink-100">
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-brandPink text-2xl flex-shrink-0">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Instagram</h3>
+                            <p class="text-sm text-brandPink font-medium">@jiacreaciones</p>
+                        </div>
+                    </a>
+
+                    <!-- Correo Electrónico -->
+                    <a href="mailto:jiacreaciones@gmail.com" class="bg-white p-4 rounded-2xl custom-shadow flex items-center gap-4 custom-card-hover border border-yellow-100">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl flex-shrink-0">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-semibold text-slate-700">Correo</h3>
+                            <p class="text-sm text-amber-600 font-medium">jiacreaciones@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Formulario de Pedidos -->
+                <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100">
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-6 flex items-center gap-2">
+                        <i class="fa-regular fa-paper-plane text-brandGreen"></i> Envíanos un Mensaje
+                    </h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Tu Nombre</label>
+                            <input type="text" placeholder="Ej. María Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Correo Electrónico</label>
+                            <input type="email" placeholder="maria@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-600 mb-1">Detalles de tu pedido o consulta</label>
+                            <textarea rows="4" placeholder="Cuéntanos qué productos necesitas o la idea para tu agenda..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brandBlue focus:ring-2 focus:ring-brandBlue/20 transition" required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandBlue hover:bg-brandBlueDark text-white font-heading font-bold py-3 px-6 rounded-xl transition duration-300 shadow-md shadow-brandBlue/20 flex items-center justify-center gap-2">
+                            Enviar Consulta <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Ubicación y Horarios -->
+            <div class="bg-white p-8 rounded-3xl custom-shadow border border-slate-100 space-y-6 h-full flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-700 font-heading mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-brandPink"></i> Nuestra Ubicación
+                    </h3>
+                    <p class="text-slate-600 mb-4">
+                        <strong class="text-slate-700">Dirección:</strong> Av. Intercomunal, cruce con Calle 5 de Julio, Los Jardines del Valle, Caracas, Venezuela.
+                    </p>
+                    
+                    <!-- Contenedor del Mapa -->
+                    <div class="w-full h-72 rounded-2xl overflow-hidden border-2 border-brandSoftBg shadow-inner relative group">
+                        <!-- Mapa interactivo centrado en la zona indicada -->
+                        <iframe 
+                            src="https://google.com" 
+                            class="w-full h-full border-0 grayscale-[15%] group-hover:grayscale-0 transition duration-500" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Horario de Atención -->
+                <div class="bg-brandSoftBg p-5 rounded-2xl border border-blue-50">
+                    <h4 class="font-heading font-bold text-brandBlueDark mb-2 flex items-center gap-2">
+                        <i class="fa-regular fa-clock"></i> Horario de Atención:
+                    </h4>
+                    <ul class="text-sm space-y-1 text-slate-600">
+                        <li class="flex justify-between"><span>Lunes a Viernes:</span> <span class="font-semibold text-slate-700">9:00 AM - 6:00 PM</span></li>
+                        <li class="flex justify-between"><span>Sábados:</span> <span class="font-semibold text-slate-700">10:00 AM - 2:00 PM</span></li>
+                        <li class="flex justify-between text-brandPink font-medium"><span>Domingos:</span> <span>Cerrado (Cargando energías)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+Usa el código con precaución.¿Qué se ajustó con estos datos?Enlace Internacional de WhatsApp: Se le agregó el prefijo de país 58 requerido para abrir chats automáticamente sin importar dónde esté el cliente.Marcación telefónica directa: Configurado con la etiqueta HTML tel: para que, al tocarlo desde un móvil, abra la app de llamadas al instante.Dirección escrita y visual: El texto y las coordenadas del iframe ahora apuntan directamente a la zona de Los Jardines del Valle en El Valle.¿Hay alguna otra sección o funcionalidad que te gustaría estructurar o corregir para tu página web?WikipediaLos Jardines de El Valle - Wikipedia, la enciclopedia libreLa estación, está ubicada la Avenida Intercomunal del Valle a la altura del sector Los Jardines, en la Parroquia El Valle,es.aroundus.comParroquia civil en municipio Libertador, Caracas, Venezuela12 sept 2026 — El Valle es una parroquia civil en el municipio Libertador de Caracas ubicada en la zona suroeste de la ciudad. El área combina zo...    </style>
 </head>
 <body class="bg-slate-50 min-h-screen flex flex-col antialiased selection:bg-brandYellow selection:text-slate-800">
 
